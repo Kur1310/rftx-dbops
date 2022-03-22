@@ -35,7 +35,7 @@ jobs:
       
       
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag ${{ secrets.GCP_ARTIFACTORY_LOCATION }}/dbops:$(date +%s)
+      run: docker build . --file Dockerfile --tag ${{ secrets.GCP_ARTIFACTORY_LOCATION }}/dbops
       
     - name: Auth config-docker
       run: gcloud auth configure-docker us-central1-docker.pkg.dev
